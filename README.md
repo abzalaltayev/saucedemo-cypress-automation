@@ -157,7 +157,6 @@ This project includes comprehensive documentation:
 - **`bug-report.txt`** - Identified bugs with reproduction steps and priorities
 - **`test-summary-report.txt`** - Test execution results and quality assessment
 - **`testability-improvements.txt`** - Recommendations for enhancing application testability
-- **`performance/PERFORMANCE_TEST_PLAN.txt`** - Performance testing strategy and execution guide
 
 ## Troubleshooting
 
