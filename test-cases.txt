@@ -1,0 +1,119 @@
+SAUCE DEMO TEST CASES
+====================
+
+TC01 – Successful Login with Valid Credentials
+-----------------------------------------------
+Objective: Verify that a user can log in with valid credentials.
+Precondition: User has valid username/password.
+
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Enter username: standard_user
+3. Enter password: secret_sauce
+4. Click the Login button
+
+Expected Result: User is redirected to the Inventory page.
+
+TC02 – Login Fails with Invalid Credentials
+-------------------------------------------
+Objective: Confirm that incorrect credentials display an error.
+
+Steps:
+1. Open login page
+2. Enter username: wrong_user
+3. Enter password: wrong_pass
+4. Click Login
+
+Expected Result: Error message appears: "Username and password do not match any user."
+
+TC03 – Login Fails with Empty Fields
+------------------------------------
+Objective: Ensure login requires both fields.
+
+Steps:
+1. Open login page
+2. Leave username and password blank
+3. Click Login
+
+Expected Result: Error: "Username is required."
+
+TC04 – Add Item to Cart
+-----------------------
+Objective: Verify adding a product to the cart.
+
+Steps:
+1. Log in with valid user
+2. On inventory page, click Add to Cart for "Sauce Labs Backpack"
+3. Open cart by clicking the cart icon
+
+Expected Result: The item is listed in the cart with correct name & price.
+
+TC05 – Remove Item from Cart
+----------------------------
+Objective: Validate removing an item.
+
+Steps:
+1. Log in with valid user
+2. Add one item to cart
+3. Open cart
+4. Click Remove next to the item
+
+Expected Result: Item is removed, cart is empty.
+
+TC06 – Checkout Flow (Valid Info)
+---------------------------------
+Objective: Verify complete checkout with valid data.
+
+Steps:
+1. Log in with valid user
+2. Add an item to cart
+3. Navigate to cart → click Checkout
+4. Enter valid First Name, Last Name, ZIP Code
+5. Click Continue → click Finish
+
+Expected Result: Confirmation message "THANK YOU FOR YOUR ORDER." is displayed.
+
+TC07 – Checkout with Missing Required Field
+-------------------------------------------
+Objective: Validate mandatory checkout fields.
+
+Steps:
+1. Log in with valid user
+2. Add item → open cart → click Checkout
+3. Leave First Name blank
+4. Click Continue
+
+Expected Result: Error: "First Name is required."
+
+TC08 – Sort Products by Price (Low → High)
+------------------------------------------
+Objective: Verify sorting functionality by price.
+
+Steps:
+1. Log in with valid user
+2. From sort dropdown, select "Price (low to high)"
+3. Observe product listing
+
+Expected Result: Items are ordered in ascending price.
+
+TC09 – Sort Products by Name (A → Z)
+------------------------------------
+Objective: Ensure sorting alphabetically works.
+
+Steps:
+1. Log in with valid user
+2. From sort dropdown, select "Name (A to Z)"
+3. Observe product list
+
+Expected Result: Products are listed alphabetically.
+
+TC10 – Logout Functionality
+---------------------------
+Objective: Confirm user session ends after logout.
+
+Steps:
+1. Log in with valid user
+2. Open hamburger menu (≡)
+3. Click Logout
+
+Expected Result: User is redirected to login page; new login required to access inventory.

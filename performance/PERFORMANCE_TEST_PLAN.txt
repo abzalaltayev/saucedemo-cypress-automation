@@ -1,0 +1,60 @@
+PERFORMANCE TEST PLAN - SAUCE DEMO APPLICATION
+
+PURPOSE:
+Test the Sauce Demo application performance under load to ensure it can handle expected traffic while maintaining good response times.
+
+TEST SCOPE:
+- Application: https://www.saucedemo.com
+- Tool: k6
+- Focus: Login functionality performance
+
+TEST SCENARIO:
+Login Load Test
+- Simulate 10 concurrent users logging in
+- Duration: 4 minutes total
+- Pattern: 1min ramp-up, 2min sustained load, 1min ramp-down
+
+TEST DATA:
+- Username: standard_user
+- Password: secret_sauce
+
+SUCCESS CRITERIA:
+- 95% of requests complete within 2 seconds
+- Error rate below 10%
+- Application remains stable
+
+TEST STEPS:
+1. Load login page
+2. Submit login credentials
+3. Measure response times and errors
+
+EXECUTION:
+Run: npm run perf:login
+Or: k6 run performance/login-load-test.js
+
+MONITORING:
+- Response times (average, 95th percentile)
+- Error rates (HTTP errors, login failures)
+- Throughput (requests per second)
+
+SCHEDULE:
+- Run weekly during development
+- Run before major releases
+- Duration: 4 minutes per test
+
+RISKS:
+- Demo site may be slow or unavailable
+- Network connectivity issues
+- Rate limiting by application
+
+MAINTENANCE:
+- Update test scripts when application changes
+- Adjust thresholds based on requirements
+- Keep k6 and dependencies current
+
+TOOLS NEEDED:
+- k6 installed (brew install k6)
+- Node.js and npm
+- Internet connection
+
+Last Updated: October 2024

@@ -1,0 +1,23 @@
+{
+  "name": "saucedemo-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cypress + TypeScript automation framework for SauceDemo",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "perf:login": "k6 run performance/login-load-test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "cypress": "^13.6.0",
+    "eslint": "^9.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^3.3.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  }
+}

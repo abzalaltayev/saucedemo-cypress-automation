@@ -1,0 +1,68 @@
+{
+  "valid": [
+    {
+      "firstName": "Alex",
+      "lastName": "Martinez",
+      "postalCode": "90210",
+      "description": "Standard valid checkout data"
+    },
+    {
+      "firstName": "Sofia",
+      "lastName": "Chen",
+      "postalCode": "10001",
+      "description": "Alternative valid checkout data"
+    },
+    {
+      "firstName": "Diego",
+      "lastName": "Rodriguez",
+      "postalCode": "33101",
+      "description": "Another valid checkout data set"
+    }
+  ],
+  "invalid": [
+    {
+      "firstName": "",
+      "lastName": "Martinez",
+      "postalCode": "90210",
+      "description": "Missing first name"
+    },
+    {
+      "firstName": "Alex",
+      "lastName": "",
+      "postalCode": "90210",
+      "description": "Missing last name"
+    },
+    {
+      "firstName": "Alex",
+      "lastName": "Martinez",
+      "postalCode": "",
+      "description": "Missing postal code"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "postalCode": "",
+      "description": "All fields empty"
+    }
+  ],
+  "edgeCases": [
+    {
+      "firstName": "X",
+      "lastName": "Y",
+      "postalCode": "9",
+      "description": "Minimum length values"
+    },
+    {
+      "firstName": "SuperLongFirstNameThatExceedsNormalLength",
+      "lastName": "SuperLongLastNameThatExceedsNormalLength",
+      "postalCode": "98765432109876543210",
+      "description": "Maximum length values"
+    },
+    {
+      "firstName": "Alex2024",
+      "lastName": "Martinez456",
+      "postalCode": "XYZ789",
+      "description": "Alphanumeric values"
+    }
+  ]
+}

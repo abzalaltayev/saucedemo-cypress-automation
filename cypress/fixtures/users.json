@@ -1,0 +1,32 @@
+{
+  "valid": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Standard user with full access"
+  },
+  "locked": {
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "description": "Locked out user account"
+  },
+  "problem": {
+    "username": "problem_user",
+    "password": "secret_sauce",
+    "description": "User with problematic behavior"
+  },
+  "performance": {
+    "username": "performance_glitch_user",
+    "password": "secret_sauce",
+    "description": "User with performance issues"
+  },
+  "invalid": {
+    "username": "wrong_user",
+    "password": "wrong_pass",
+    "description": "Invalid credentials for testing"
+  },
+  "empty": {
+    "username": "",
+    "password": "",
+    "description": "Empty credentials for validation testing"
+  }
+}

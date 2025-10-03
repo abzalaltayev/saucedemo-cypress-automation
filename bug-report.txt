@@ -1,0 +1,122 @@
+SAUCE DEMO BUG REPORT
+====================
+
+Report Date: October 2024
+Application: Sauce Demo (https://www.saucedemo.com)
+Test Environment: Production Demo Site
+
+BUG #1: Inconsistent Error Message Display
+------------------------------------------
+Severity: Low
+Priority: Medium
+
+Description:
+The application displays an inconsistent error message format when login fails.
+
+Steps to Reproduce:
+1. Navigate to https://www.saucedemo.com/
+2. Enter invalid credentials (e.g., username: "test", password: "test")
+3. Click the Login button
+4. Observe the error message displayed
+
+Expected Result:
+A professional, user-friendly error message should be displayed.
+
+Actual Result:
+Error message contains "Epic sadface" text, which appears inconsistent with standard UI practices.
+
+BUG #2: Checkout Button Remains Active with Empty Cart
+-----------------------------------------------------
+Severity: Medium
+Priority: High
+
+Description:
+The checkout button remains clickable and functional even when the shopping cart is empty, allowing users to proceed to checkout without any items.
+
+Steps to Reproduce:
+1. Log in with valid credentials (standard_user / secret_sauce)
+2. Navigate to the shopping cart page
+3. Ensure the cart is empty (no items added)
+4. Observe the checkout button state
+5. Click the checkout button
+
+Expected Result:
+The checkout button should be disabled or hidden when the cart is empty, preventing users from proceeding to checkout without items.
+
+Actual Result:
+The checkout button remains active and clickable, allowing users to proceed to the checkout flow with an empty cart.
+
+BUG #3: Checkout Accepts Invalid Postal Codes
+-------------------------------------------------
+Severity: Medium
+Priority: Medium
+
+Description:
+The checkout form accepts invalid postal code field, which should typically only accept valid values.
+
+Steps to Reproduce:
+1. Log in with valid credentials
+2. Add an item to the cart
+3. Proceed to checkout
+4. Fill in First Name and Last Name with valid data
+5. Enter an invalid postal code (e.g., "ABC123" or "XYZ")
+6. Click Continue
+
+Expected Result:
+The form should validate the postal code field and display an error message for invalid entries, preventing form submission.
+
+Actual Result:
+The form accepts invalid postal codes and allows the user to proceed to the next checkout step.
+
+BUG #4: Username/Password Fields Not Cleared by 'X' Button
+----------------------------------------------------------
+Severity: Low
+Priority: Low
+
+Description:
+The 'X' button (clear button) in the username and password input fields does not clear the field contents as expected.
+
+Steps to Reproduce:
+1. Navigate to the login page
+2. Enter text in the username field
+3. Click the 'X' button in the username field
+4. Observe if the field is cleared
+5. Repeat steps 2-4 for the password field
+
+Expected Result:
+Clicking the 'X' button should clear the contents of the respective input field.
+
+Actual Result:
+The 'X' button does not clear the field contents, requiring manual deletion of text.
+
+BUG #5: Reset App State Inconsistency
+-------------------------------------
+Severity: Medium
+Priority: Medium
+
+Description:
+The "Reset App State" functionality clears the cart contents but leaves remove buttons visible, creating an inconsistent UI state.
+
+Steps to Reproduce:
+1. Log in with valid credentials
+2. Add one or more items to the cart
+3. Use the "Reset App State" 
+4. Observe cart is cleared
+5. Remove button is still visible
+
+Expected Result:
+After resetting app state, the cart should be completely empty with no items or remove buttons visible.
+
+Actual Result:
+The cart contents are cleared, but remove buttons may still be visible, creating an inconsistent UI state.
+
+SUMMARY
+=======
+
+Total Bugs Identified: 5
+- High Priority: 1
+- Medium Priority: 3  
+- Low Priority: 1
+
+Critical Issues Requiring Immediate Attention:
+- Checkout button functionality with empty cart (High Priority)
