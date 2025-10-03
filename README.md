@@ -43,7 +43,7 @@ We use **k6** for load testing to ensure the application can handle expected tra
 - **Error rate tracking** - Monitors failed requests and login errors
 - **Simple execution** - One command to run performance tests
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 cypress/
@@ -94,7 +94,7 @@ testability-improvements.txt    # Recommendations for better testability
 - **Response Time Monitoring** - 95th percentile < 2 seconds
 - **Error Rate Tracking** - < 10% failure rate
 
-## 🔧 Available Commands
+## Available Commands
 
 ```bash
 # Development
@@ -149,7 +149,7 @@ k6 run performance/login-load-test.js
 - **Error Handling** - Comprehensive validation and error checking
 - **Performance Monitoring** - Regular load testing to catch regressions
 
-## 📋 Documentation
+## Documentation
 
 This project includes comprehensive documentation:
 
