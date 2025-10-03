@@ -51,6 +51,7 @@ describe('Login', () => {
       login.enterUsername(valid.username);
       login.clickLoginButton();
       // Should complain about missing password
+      // Password is required
       login.error().should('contain.text', 'Password is required');
     });
   });
